@@ -1,9 +1,20 @@
 <br>
 <br>
 <h1>Need Music?</h1>
-<p class="lead"> Use the Spotify app to browser new releases and... </p>
+<p class="lead"> Use the Spotify app to browser new releases and find your favorite songs... </p>
 <form>
     <div class="form-group">
         <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" class="form-control" placeholder="Search Music...">
     </div>
 </form>
+<div *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="search-res well">
+                    <h4>{{res.name}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

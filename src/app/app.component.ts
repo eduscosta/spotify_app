@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import {Http} from '@angular/http';
 
 @Component({
   moduleId: module.id,

@@ -1,3 +1,4 @@
+import { SpotifyService } from './services/spotify.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +11,6 @@ import { AboutComponent } from './components/about/about.component';
 import { SearchComponent } from './components/search/search.component';
 
 import { routing } from './app.routing';
-
 
 const appRoutes:Routes=[
   {path:'',           component: SearchComponent},
@@ -30,7 +30,7 @@ const appRoutes:Routes=[
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
